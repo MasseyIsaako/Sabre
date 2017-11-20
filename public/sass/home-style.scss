@@ -1,0 +1,148 @@
+// IMPORT GOOGLE FONT: RALEWAY 300 => (LIGHT) | 400 => (REGULAR) | 700 => (BOLD)
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+
+// VARIABLES
+
+// -- SIZING --
+$null:0px;
+$full:100%;
+
+//  -- COLOUR --
+$asphalt:#34495e;
+$concrete:#95a5a6;
+$clouds:#ecf0f1;
+
+// STANDARD RESET
+html, body{
+	padding:$null;
+	background-color:$clouds;
+	margin:$null;
+	overflow-x:hidden;
+}
+
+*{
+	box-sizing:border-box !important;
+	font-family:'Raleway', sans-serif;
+	font-weight:400;
+	padding:$null;
+}
+
+ul{
+	padding:$null;
+	list-style-type:none;
+}
+
+a{text-decoration:none;}
+
+h1{text-align:center;}
+
+#wrapper{
+	width:100vw;
+	height:auto;
+	position:absolute;
+	display:block;
+}
+
+// HEADER STYLING
+#header{
+	position:fixed;
+	z-index:999;
+	width:$full;
+	background-color:$clouds;
+
+	#branding{
+		width:$full;
+
+		h1{
+			padding:10px;
+			margin:$null;
+			color:$asphalt;
+			text-align:center;
+			font-weight:300;
+		}
+	}
+
+	#main-navigation{
+		ul{
+			display:flex;
+			flex-direction:row;
+			justify-content:space-evenly;
+			width:$full;
+			margin:$null;
+			padding:10px;
+
+			li{
+				flex-grow:1;
+				float:left;
+				width:auto;
+				text-align:center;
+				padding:10px;
+
+				a:hover{
+					color:$asphalt;
+				}
+			}
+		}
+	}
+}
+
+//  -- MAIN CONTENT --
+#main-image{
+	float:left;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	background-image:url("../images/front-splash.jpg");
+	background-size:cover;
+	background-position:center;
+	width:$full;
+	height:100vh;
+	top:$null;
+
+	h1{
+		font-size:45pt;
+		text-align:center;
+		color:white;
+	}
+}
+
+.container{
+	display:flex;
+	flex-direction:column;
+	margin-top:250px;
+}
+
+.row{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	align-self:center;
+	width:90%;
+	height:auto;
+
+	.content-container{
+		width:30%;
+		max-height:500px;
+		overflow:hidden;
+		background-color:purple;
+
+		.image-container{
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			overflow:hidden;
+			height:200px;
+		}
+
+		img{height:$full;}
+	}
+}
+
+
+
+
+
+
+
+
+
