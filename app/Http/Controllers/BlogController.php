@@ -4,8 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\BlogPosts;
+
 class BlogController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth', ['only' => ['create', 'store', 'edit', 'update', 'delete']]);
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+    
     /**
      * Display a listing of the resource.
      *
